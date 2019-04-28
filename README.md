@@ -52,5 +52,5 @@ for(var i=0,j=names.length;i<j;i++){
 Another thing to ensure is that you keep computation-heavy code outside loops. This includes regular expressions and — more importantly — DOM manipulation. You can create the DOM nodes in the loop but avoid inserting them into the document. You’ll find more on DOM best practices in the next section.
 
 ### References
-[W3C](https://www.w3.org/wiki/JavaScript_best_practices)
+[W3C](https://www.w3.org/wiki/JavaScript_best_practices)</br>
 [JavaScript: The Good Parts](https://www.amazon.in/JavaScript-Good-Parts-ebook/dp/B0026OR2ZY)
