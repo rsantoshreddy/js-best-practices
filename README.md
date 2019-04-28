@@ -1,5 +1,34 @@
 # JS BEST PRACTICES
 
+## == and !=
+
+The == and != operators do type coercion before comparing. This is bad because it causes ' \f\r \n\t ' == 0 to be true. This can mask type errors.
+
+When comparing to any of the following values, always use the === or !== operators, which do not do type coercion:
+
+```
+0 '' undefined null false true
+```
+
+If you want the type coercion, then use the short form. Instead of:
+```javascript
+(foo != 0)
+```
+just say:
+```javascript
+(foo)
+```
+And instead of:
+```javascript
+(foo == 0)
+```
+say:
+```javascript
+(!foo)
+```
+
+Use of the === and !== operators is always preferred. There is a "Disallow == and != " (eqeqeq) option, which requires the use of === and !== in all cases.
+
 ## Semicolon Insertion
 
 JavaScript has a mechanism that tries to correct faulty programs by automatically inserting semicolons. Do not depend on this. It can mask more serious errors.
